@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const squares = []
     let score = 0
     const scoreDisplay =document.getElementById('score')
+    let myAudio = document.querySelector('#audio') 
 
 const candyColors = [
     'url(images/red-candy.png)', 'url(images/yellow-candy.png)', 'url(images/orange-candy.png)',
@@ -113,8 +114,10 @@ function checkRowForFour(){
         if (notValid.includes(i)) continue
 
         if (rowOfFour.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)){
+            myAudio.play()
             score +=4
             scoreDisplay.innerHTML = score
+            
             rowOfFour.forEach(index => {
                 squares[index].style.backgroundImage=''
             })
@@ -132,8 +135,10 @@ function checkColumnForFour(){
         const isBlank = squares[i].style.backgroundImage === ""
 
         if (columnOfFour.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)){
+            myAudio.play()
             score +=4
             scoreDisplay.innerHTML = score
+            
             columnOfFour.forEach(index => {
                 squares[index].style.backgroundImage = ''
             })
@@ -154,8 +159,10 @@ function checkRowForThree(){
         if (notValid.includes(i)) continue
 
         if (rowOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)){
+            myAudio.play()
             score +=3
             scoreDisplay.innerHTML = score
+            
             rowOfThree.forEach(index => {
                 squares[index].style.backgroundImage=''
             })
@@ -173,6 +180,7 @@ function checkColumnForThree(){
         const isBlank = squares[i].style.backgroundImage === ""
 
         if (columnOfThree.every(index => squares[index].style.backgroundImage === decidedColor && !isBlank)){
+            myAudio.play()
             score +=3
             scoreDisplay.innerHTML = score
             columnOfThree.forEach(index => {
