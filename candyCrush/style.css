@@ -7,7 +7,12 @@
 }
 
 .grid div{
+    
     height: 70px;
     width: 70px;
 
 }
+
+body {
+    background-image: url('images/candy-crush-background-2.png');
+  }
