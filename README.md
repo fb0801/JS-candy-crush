@@ -4,7 +4,7 @@ This candy crush game was built following this <a href="https://www.youtube.com/
 
 <h3>Changes made:</h3>
 
-Have added sound so when a match is made a sound will be played
+Have added sound so when a match is made a sound will be played, when moving candy around a sound will also be played
 
 
 <h3>Resources used:</h3>
