@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let score = 0
     const scoreDisplay =document.getElementById('score')
     let myAudio = document.querySelector('#audio') 
+   let audio2 = document.querySelector('#audi')
 
 const candyColors = [
     'url(images/red-candy.png)', 'url(images/yellow-candy.png)', 'url(images/orange-candy.png)',
@@ -64,6 +65,7 @@ function dragend(){
 function dragOver(e){
     e.preventDefault()
     console.log(this.id, 'dragover')
+    audio2.play()
 }
 
 function dragEnter(e){
